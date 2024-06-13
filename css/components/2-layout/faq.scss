@@ -1,0 +1,134 @@
+.faq {
+  padding: 40px 0;
+  &.last {
+    padding-bottom: 350px;
+  }
+  &__inner {
+    &-title {
+      margin-bottom: 60px;
+    }
+  }
+  &Item {
+    border-bottom: 1px solid $black;
+    &__head {
+      position: relative;
+      cursor: pointer;
+      padding: 25px 20px 25px 0;
+      &.active {
+        &::before {
+          transform: translateY(-50%) rotate(135deg);
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 2px;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid $black;
+        border-right: 2px solid $black;
+        content: "";
+        transform: translateY(-50%) rotate(45deg);
+        transition: 0.3s ease;
+      }
+      h6 {
+        font-weight: 700;
+      }
+    }
+    &__body {
+      padding: 0 20px 0 0;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      &.active {
+        padding: 0 20px 24px 0;
+        max-height: 300px;
+        opacity: 1;
+      }
+    }
+  }
+}
+// 1180px
+@mixin faq-xlg-xxlg {
+  .faq {
+    &.last {
+      padding-bottom: 280px;
+    }
+    &__inner {
+      &-title {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+// 1024px
+@mixin faq-lg-xlg {
+  .faq {
+    padding: 35px 0;
+    &.last {
+      padding-bottom: 200px;
+    }
+    &__inner {
+      &-title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// 930px
+@mixin faq-md-lg {
+  .faq {
+    &.last {
+      padding-bottom: 140px;
+    }
+    &__inner {
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+    &Item {
+      &__head {
+        padding: 20px 25px 20px 0;
+        &::before {
+          width: 10px;
+          height: 10px;
+        }
+      }
+      &__body {
+        &.active {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin faq-sm-md {
+  .faq {
+    &__inner {
+      &-title {
+        text-align: center;
+      }
+    }
+  }
+}
+// 540px
+@mixin faq-xsm-sm {
+  .faq {
+    padding: 20px 0;
+    &.last {
+      padding-bottom: 70px;
+    }
+    &__inner {
+        &-title {
+          margin-bottom: 15px;
+        }
+      }
+    &Item {
+      &__head {
+        padding: 15px 25px 15px 0;
+      }
+    }
+  }
+}

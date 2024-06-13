@@ -1,0 +1,90 @@
+.contact {
+  max-width: 1640px;
+  margin: 0 auto;
+  background-color: $blue;
+  padding: 65px 0 80px;
+  &__inner {
+    &-title {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    &-form {
+      max-width: 866px;
+      margin: 0 auto;
+      p {
+        a {
+          color: $black;
+          text-decoration: underline;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -8px 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .input {
+      &__outer {
+        width: calc(50% - 16px);
+        max-width: 400px;
+        margin: 12px 8px;
+        &.big {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+    .button {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 18px;
+    }
+  }
+}
+// 750px
+@mixin contact-sm-md {
+  .contact {
+    padding: 50px 0 60px;
+  }
+}
+// 540px
+@mixin contact-xsm-sm {
+  .contact {
+    padding: 35px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 24px;
+      }
+      &-row {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 0 20px 0;
+      }
+      &-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > p {
+         text-align: center;
+        }
+      }
+      h2 {
+        margin-bottom: 12px;
+      }
+      .button {
+        max-width: 170px;
+      }
+      .input {
+        &__outer {
+          width: 100%;
+          max-width: unset;
+          margin: 0 0 16px 0;
+        }
+      }
+    }
+  }
+}

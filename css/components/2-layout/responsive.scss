@@ -1,0 +1,272 @@
+// 1640px
+@include xxxxxlg-xxxxxxlg {
+  .phoneCall {
+    font-size: 20px;
+    line-height: 24px;
+    svg {
+      width: 23px;
+      height: 23px;
+      margin-right: 5px;
+    }
+  }
+  .main {
+    padding-top: 91.55px;
+  }
+  @include header-xxxxxlg-xxxxxxlg;
+  @include nav-xxxxxlg-xxxxxxlg;
+}
+// 1520px
+@include xxxxlg-xxxxxlg {
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 42px;
+    &.sm {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .phoneCall {
+    font-size: 16px;
+    line-height: 21px;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+  .main {
+    padding-top: 95.61px;
+  }
+
+  @include header-xxxlg-xxxxlg;
+  @include intro-xxxlg-xxxxlg;
+  @include about-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include intro-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 36px;
+    &.sm {
+      font-size: 33px;
+    }
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .button {
+    font-size: 14px;
+    line-height: 20px;
+    &.secondary {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 14px 16px;
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        &.sm {
+          width: 20px;
+        }
+      }
+    }
+    &.dark {
+      padding: 12px 20px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .main {
+    padding-top: 72px;
+  }
+  @include header-xlg-xxlg;
+  @include intro-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include benefits-xlg-xxlg;
+  @include faq-xlg-xxlg;
+  @include address-xlg-xxlg;
+  @include products-xlg-xxlg;
+  @include quiz-xlg-xxlg;
+  @include footer-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 32px;
+    &.sm {
+      font-size: 28px;
+    }
+  }
+  .lang {
+    font-size: 15px;
+    line-height: 20px;
+    & > span {
+      svg {
+        width: 12px;
+        height: 9px;
+      }
+    }
+  }
+  .phoneCall {
+    font-size: 15px;
+    line-height: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 7px;
+    }
+  }
+  .main {
+    padding-top: 62px;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include intro-lg-xlg;
+  @include faq-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @include intro-md-lg;
+  @include about-md-lg;
+  @include benefits-md-lg;
+  @include faq-md-lg;
+  @include address-md-lg;
+  @include products-md-lg;
+  @include quiz-md-lg;
+  @include request-md-lg;
+  @include footer-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  .button {
+    &.light {
+      font-size: 20px;
+      line-height: 25px;
+      padding: 18px;
+      border-radius: 10px;
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 24px;
+        &.sm {
+          width: 18px;
+        }
+      }
+    }
+  }
+  @include intro-sm-md;
+  @include about-sm-md;
+  @include benefits-sm-md;
+  @include contact-sm-md;
+  @include faq-sm-md;
+  @include quiz-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include intro-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  .button {
+    &.secondary {
+      padding: 15px 20px;
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        &.sm {
+          width: 20px;
+          height: 26px;
+        }
+      }
+    }
+  }
+  .lang {
+    font-size: 13px;
+    line-height: 17px;
+    & > span {
+      padding-right: 16px;
+      svg {
+        top: 5px;
+        width: 10px;
+        height: 8px;
+      }
+    }
+  }
+  .phoneCall {
+    font-size: 13px;
+    line-height: 17px;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 7px;
+    }
+  }
+  .main {
+    padding-top: 59px;
+  }
+  .button {
+    font-size: 13px;
+    line-height: 17px;
+    &.dark {
+      padding: 11px 18px;
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include intro-xsm-sm;
+  @include faq-xsm-sm;
+  @include contact-xsm-sm;
+  @include address-xsm-sm;
+  @include products-xsm-sm;
+  @include request-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  .auto__container {
+    padding: 0 16px;
+  }
+  @include header-xxxsm-xxsm;
+}

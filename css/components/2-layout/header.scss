@@ -1,0 +1,275 @@
+.header {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 9;
+  .auto__container {
+    max-width: 1720px;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+    box-shadow: 0px 0px 10px rgba(1, 0, 3, 0.15);
+    .header__inner {
+      padding: 30px 0;
+    }
+  }
+  &__inner {
+    padding: 80px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 350px;
+      margin-right: 35px;
+      img {
+        width: 100%;
+      }
+    }
+    &-side {
+      width: calc(100% - 360px);
+      max-width: 1250px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
+    .button {
+      margin-left: 15px;
+    }
+  }
+}
+.upHeader {
+  background-color: $main;
+  .auto__container {
+    max-width: 1720px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      li {
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:last-child {
+          margin: 0;
+        }
+        a {
+          font-size: 16px;
+          line-height: 21px;
+          font-weight: 400;
+          color: $white;
+          padding: 5px;
+          &:hover {
+            opacity: 1;
+            color: $primary;
+          }
+        }
+      }
+    }
+    .phoneCall {
+      display: none;
+    }
+  }
+}
+// 1640px
+@mixin header-xxxxxlg-xxxxxxlg {
+  .header {
+    &__inner {
+      padding: 50px 0 0;
+      &-logo {
+        width: 280px;
+        margin-right: 20px;
+      }
+      &-side {
+        width: calc(100% - 320px);
+      }
+      .button {
+        padding: 7px 18px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin header-xxxlg-xxxxlg {
+  .header {
+    &.sticky {
+      .header__inner {
+        padding: 20px 0;
+      }
+    }
+    &__inner {
+      padding: 30px 0;
+      &-logo {
+        width: 240px;
+      }
+      &-side {
+        width: calc(100% - 150px);
+      }
+      .phoneCall {
+        display: none;
+      }
+    }
+  }
+  .upHeader {
+    &__inner {
+      &-links {
+        margin-right: 20px;
+        li {
+          a {
+            font-size: 14px;
+            line-height: 18px;
+            padding: 3px;
+          }
+        }
+      }
+      .phoneCall {
+        display: inline-flex;
+        color: $white;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+// 1250px
+@mixin header-xlg-xxlg-extra {
+  .header {
+  
+  }
+
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    &.sticky {
+      .header__inner {
+        padding: 15px 0;
+      }
+    }
+    &__inner {
+      padding: 20px 0;
+      &-logo {
+        width: 210px;
+        margin-right: 10px;
+      }
+      &-side {
+        width: calc(100% - 130px);
+      }
+      .button {
+        margin-left: 10px;
+      }
+    }
+  }
+  .upHeader {
+    &__inner {
+      &-links {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+    top: 50px;
+    &.sticky {
+      .nav {
+        top: 62px;
+        height: calc(100% - 62px);
+      }
+    }
+    &__inner {
+      padding: 15px 0;
+      &-side {
+        justify-content: flex-start;
+      }
+    }
+  }
+  .upHeader {
+    &__inner {
+      padding: 10px 0;
+      &-links {
+        display: none;
+      }
+    }
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    top: 39px;
+    &.sticky {
+      .nav {
+        top: 58px;
+        height: calc(100% - 58px);
+      }
+      .header__inner {
+        padding: 13px 0;
+      }
+    }
+    &__inner {
+      &-logo {
+        width: 155px;
+      }
+    }
+  }
+  .upHeader {
+    &__inner {
+      padding: 6px 0;
+      &-links {
+        display: none;
+      }
+    }
+  }
+}
+// 375px
+@mixin header-xxxsm-xxsm {
+  .header {
+    &__inner {
+      &-logo {
+        width: 130px;
+      }
+      .button {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

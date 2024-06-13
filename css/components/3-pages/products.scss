@@ -1,0 +1,173 @@
+.products {
+  padding: 135px 0 170px;
+  background-color: $blue;
+  &.start {
+    padding: 40px 0 190px;
+    background-color: unset;
+  }
+  &.last {
+    padding: 120px 0 230px;
+    background-color: unset;
+  }
+  &__inner {
+    &-title {
+      margin-bottom: 40px;
+      max-width: 910px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -12px;
+    }
+    h2 {
+      margin-bottom: 25px;
+      font-weight: 700;
+      max-width: 840px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &Item {
+    margin: 12px;
+    width: calc(33.3% - 24px);
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    padding: 40px 30px 26px;
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 6px 15px rgba(1, 0, 3, 0.1);
+    }
+    h3 {
+      line-height: 30px;
+      height: 90px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      margin-bottom: 14px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    &__image {
+      width: 100%;
+      padding-bottom: 70%;
+      max-width: 350px;
+      margin: 0 auto;
+      position: relative;
+      &.mid {
+        img {
+          width: 40%;
+        }
+      }
+      &.big {
+        img {
+          width: 100%;
+        }
+      }
+      &.vid {
+        align-items: flex-start;
+        img {
+          width: 83%;
+        }
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 37%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+// 1180px
+@mixin products-xlg-xxlg {
+  .products {
+    padding: 100px 0;
+    &.start {
+      padding: 40px 0 140px;
+    }
+    &.last {
+      padding: 120px 0 150px;
+    }
+    &__inner {
+      &-row {
+        margin: 0 -7px;
+      }
+    }
+    &Item {
+      margin: 7px;
+      width: calc(33.3% - 14px);
+      padding: 30px 20px 20px;
+      h3 {
+        line-height: 25px;
+        height: 75px;
+      }
+    }
+  }
+}
+// 930px
+@mixin products-md-lg {
+  .products {
+    padding: 60px 0;
+    &.start {
+      padding: 40px 0 80px;
+    }
+    &.last {
+      padding: 80px 0;
+    }
+
+    &Item {
+      width: calc(50% - 14px);
+    }
+  }
+}
+// 540px
+@mixin products-xsm-sm {
+  .products {
+    padding: 40px 0;
+    &.start {
+      padding: 40px 0;
+    }
+    &.last {
+      padding: 40px 0;
+    }
+    &__inner {
+      &-title {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 20px 0;
+      &:last-child {
+        margin: 0;
+      }
+      h3 {
+        font-size: 22px;
+        line-height: 26px;
+        height: unset;
+        display: block;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
